@@ -1,0 +1,8 @@
+<div class="gamesList">
+    {% for game in gamesList %}
+        {% include "gamecard.html" %}
+    {% endfor %}
+    {% if gamesList|length==0 %}
+        {{ notFoundMessage }}
+    {% endif %}
+</div>

@@ -1,0 +1,87 @@
+/* Base styles for the wishlist page */
+.wishlist-h2 {
+    font-size: 24px;
+    color: dodgerblue;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform .3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+li:hover {
+    transform: translateY(-10px);
+}
+
+/* Styles for the game cards */
+.gameLink {
+    text-decoration: none;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform .3s ease;
+}
+
+.game:hover {
+    transform: scale(1.05);
+}
+
+.gameImage {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    color: black;
+}
+
+/* Styles for the "Remove from Wishlist" button */
+form {
+    margin-top: 15px;
+    text-align: center;
+}
+
+input[type="submit"] {
+    font-family: 'Rubik', sans-serif;
+    background-color: #FF6B6B; /* A red color for removal actions */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #FF3F3F; /* A darker red on hover */
+}
+
+/* If the wishlist is empty */
+.wishlist-p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: grey;
+}

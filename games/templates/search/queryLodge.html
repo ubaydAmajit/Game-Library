@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block title %}Search for Games{% endblock %}
+{% block extraStyles %}
+    <link rel="stylesheet" href="../static/css/gameslist.css">
+{% endblock %}
+{% block content %}
+
+    <div class="searchPageContent">
+        <h2>Search for Games</h2>
+        <p>Enter a game title, publisher, or description to begin your search.</p>
+        <div class="searchCenter">
+            {% include "search/searchBarCentered.html" %}
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+<div class="selector">
+    <!-- Always show the '<<' link to go to the first page -->
+    <a href="{{ url_for(request.endpoint, page=1, sortBy=sort_by, genre_name=genre_name) }}" title="Go to the first page"><<</a>
+
+    {% if current_page > 1 %}
+        <a href="{{ url_for(request.endpoint, page=current_page-1, sortBy=sort_by, genre_name=genre_name) }}" title="Go to the previous page"><</a>
+    {% else %}
+        <span title="No previous" class="inactive"><</span>
+    {% endif %}
+
+    <strong title="Current page">{{ current_page }}</strong>
+
+    {% if current_page < total_pages %}
+        <a href="{{ url_for(request.endpoint, page=current_page + 1, sortBy=sort_by, genre_name=genre_name) }}" title="Go to the next page">></a>
+    {% else %}
+        <span title="No next" class="inactive">></span>
+    {% endif %}
+
+
+    {% if total_pages > 1 %}
+        <a href="{{ url_for(request.endpoint, page=total_pages, sortBy=sort_by, genre_name=genre_name) }}" title="Go to the last page">>></a>
+    {% else %}
+        <span title="No last page" class="inactive">>></span>
+    {% endif %}
+</div>

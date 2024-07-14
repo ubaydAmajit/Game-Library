@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <head>
+        <title>{% block title %}Games{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        {% block extraStyles %}{% endblock %}
+    </head>
+    <body>
+        {% include "navbar.html" %}
+        <div class="scrolling">
+            {% include "titlebar.html" %}
+            <div class="content">
+                {% block content %} {% endblock %}
+            </div>
+        </div>
+
+    </body>
+</html>

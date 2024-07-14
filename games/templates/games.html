@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% block title %}All Games{% endblock %}
+{% block extraStyles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/gameslist.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/selector.css') }}">
+
+{% endblock %}
+{% block content %}
+    <div class="selector">
+        <h5>Sort By:</h5>
+        <a href="{{ url_for('library_bp.games', sortBy="Newest", page=current_page) }}">Newest</a>
+        <a href="{{ url_for('library_bp.games', sortBy="Oldest", page=current_page) }}">Oldest</a>
+    </div>
+
+    <div class="genre-sidebar">
+        <h2>Filter by Genre</h2>
+        <ul>
+            {% for genre in genresList %}
+            <li><a href="{{ url_for('library_bp.games_by_genre', genre_name=genre.genre_name, page=1) }}">{{ genre.genre_name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {% include "pageselector.html" %}
+
+    {% set notFoundMessage = 'No Games found at specified page' %}
+    <div class="all-games">
+        <h2>
+            {% if selected_genre %}
+                All {{ selected_genre }} Games:
+            {% else %}
+                All Games:
+            {% endif %}
+        </h2>
+    </div>
+    {% include "gamesList.html" %}
+
+    {% include "pageselector.html" %}
+
+
+{% endblock %}

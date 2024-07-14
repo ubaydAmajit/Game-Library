@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    {% block extraStyles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/review_from.css') }}">
+    {% endblock %}
+
+    <h2>Review {{ game.title }}</h2>
+
+    <form method="post">
+        <!-- CSRF Protection token for Flask-WTF -->
+        {{ form.hidden_tag() }}
+
+        <div class="form-group">
+            <label>Rating:</label>
+            <div class="star-rating">
+                {% for star_num in range(5, 0, -1) %}
+                    <input type="radio" id="star{{ star_num }}" name="rating" value="{{ star_num }}" required>
+                    <label for="star{{ star_num }}" title="{{ star_num }} out of 5 stars">&#9733;</label>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea name="comment" id="comment" rows="5" required></textarea>
+            {% if form.comment.errors is not none %}
+                {% for error in form.comment.errors %}
+                    <div>{{ error }}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <input type="submit" value="Submit Review">
+    </form>
+
+    <a href="{{ url_for('description_bp.description', game_id=game.game_id) }}">Back to game description</a>
+{% endblock %}

@@ -1,0 +1,10 @@
+<div class="sidebar">
+    <a href="{{ url_for('home_bp.home') }}">
+        <img src="{{ url_for('static', filename='icon.svg')}}" alt="controllerIcon" width="120" height="120"/>
+    </a>
+    <h2>Game Library</h2>
+    <a class="page" href="{{ url_for('home_bp.home')}}"> ⌂ Home</a>
+    <a class="page" href="{{ url_for('library_bp.games') }}">ᐈ Games</a>
+    <a class="page" href="{{ url_for('search_bp.search') }}">🔍︎ Search</a>
+    <a class="bottom">{{ copyright_rand()|safe }}</a>
+</div>

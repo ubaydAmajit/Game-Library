@@ -1,0 +1,40 @@
+.selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.selector a,
+.selector strong,
+.selector .inactive {
+    margin: 0 8px;
+    padding: 8px 12px;
+    border: 2px solid #136ac7;
+    text-decoration: none;
+    color: dodgerblue;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.selector a:hover {
+    background-color: dodgerblue;
+    color: #fff;
+}
+
+.selector strong {
+    /*
+    background-color: #007BFF;
+     */
+    background-color: dodgerblue;
+    color: #fff;
+    cursor: default;
+}
+
+.inactive {
+    cursor: not-allowed;
+    color: #ccc;
+    border-color: #ccc;
+}

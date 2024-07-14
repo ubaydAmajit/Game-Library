@@ -1,0 +1,129 @@
+.auth-dialog{
+    border: 1px solid lightgray;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+    height: 330px;
+    margin-top:60px;
+
+}
+.auth-register{
+    border: 1px solid lightgray;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+    height: 380px;
+    margin-top:60px;
+}
+.auth-dialog, .auth-register {
+    text-align: center;
+}
+
+.auth-dialog input[type="text"],
+.auth-dialog input[type="password"],
+.auth-register input[type="text"],
+.auth-register input[type="password"]{
+    text-align: left;
+}
+
+.auth-dialog input[type="text"],
+.auth-dialog input[type="password"],
+.auth-register input[type="text"],
+.auth-register input[type="password"] {
+    text-align: left;
+    font-size: 18px;
+    padding: 10px 15px;
+    background: transparent;
+    border: none;
+    width: 60%;                   /* Adjust as needed to make the input fields wider */
+    margin: 0;
+    width: 100%;
+    display: block;
+    outline: none;
+    transition: border-color 0.3s ease;
+    text-align: left;
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    flex-grow: 1;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+
+.auth-dialog input[type="text"]:focus,
+.auth-dialog input[type="password"]:focus,
+.auth-register input[type="text"]:focus,
+.auth-register input[type="password"]:focus{
+    border-color: #007BFF;
+}
+.password-group, .user-group {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    width: 60%;
+    margin: 0 auto 15px auto;
+}
+div.username, div.password {
+    flex-shrink: 10;
+    min-width: 0;
+}
+
+.input-icon {
+    width: 30px;
+    height: auto;
+}
+
+
+.sign-in-button .submit-button {
+    background-color: dodgerblue; /* Primary color */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.sign-in-button .submit-button:hover {
+    background-color: #0056b3;
+}
+
+.sign-in-button .submit-button:active {
+    background-color: #004499;
+}
+
+.sign-in-button .submit-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #007BFF;
+}
+
+.sign-up {
+    border: 1px solid lightgray;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+    height: 90px;
+    background-color: dodgerblue;
+    color:white;
+}
+
+.sign-up p{
+    text-align: center;
+}
+
+.intro p{
+    text-align: center;
+}
+
+.sign-in-link,
+.sign-up-link{
+    text-align: center;
+}
+
+.white-link{
+    color:white;
+}

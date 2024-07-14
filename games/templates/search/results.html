@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block title %}Search Results{% endblock %}
+{% block extraStyles %}
+    <link rel="stylesheet" href="../static/css/gameslist.css">
+{% endblock %}
+{% block content %}
+    <div class="searchTop">
+        {% include "search/searchBarTop.html" %}
+    </div>
+    {% set notFoundMessage = 'No Games Found With The Specified Criteria' %}
+    {% include "gamesList.html" %}
+{% endblock %}

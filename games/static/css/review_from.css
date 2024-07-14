@@ -1,0 +1,101 @@
+/* Main styling for the review form */
+form {
+    max-width: 600px;
+    margin: 0 auto; /* center the form on the page */
+    padding: 20px;
+    border: 1px solid #e5e5e5; /* light gray border */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f9f9f9; /* light gray background */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* subtle shadow for depth */
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Individual form groups for better separation */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Rating dropdown styling */
+#rating {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.star-rating {
+    font-size: 24px;
+    direction: rtl; /* This is used to reverse the order so we can use the general sibling selector (~) effectively */
+    display: inline-block;
+    user-select: none;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    color: lightgray;
+    cursor: pointer;
+    padding: 5px;
+    display: inline-block; /* This property will align the stars horizontally */
+}
+
+.star-rating input[type="radio"]:checked ~ label {
+    color: gold;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: gold;
+}
+
+
+
+/* Textarea styling */
+#comment {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    resize: vertical; /* allow vertical resizing, prevent horizontal resizing */
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    background-color: #007BFF; /* blue background */
+    color: #FFFFFF; /* white text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s; /* transition for hover effect */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* darker blue on hover */
+}
+
+/* Link back to game description */
+a {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #007BFF; /* blue color, similar to bootstrap */
+}
+
+a:hover {
+    text-decoration: underline;
+}

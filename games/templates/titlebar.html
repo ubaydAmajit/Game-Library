@@ -1,0 +1,29 @@
+<div class="titlebar">
+    <div></div>
+    <div>
+        <a href="{{ url_for('home_bp.home') }}" class="titlebar-link">Game Library</a>
+        <p>{{ copyright_rand()|safe }}</p>
+    </div>
+    <div>
+    {% if session["username"] %}
+        <div class="my-profile-button">
+            <img src="{{ url_for('static', filename='default-user-icon.svg') }}" alt="userIcon" class="user-icon">
+            <div class="username-button">
+                {{ session["username"] }}
+                <!-- Dropdown content can go here, for example: -->
+                <div class="dropdown-content">
+                    <a href="{{ url_for('profile_bp.profile') }}">Profile</a>
+                    <a href="{{ url_for('wishlist_bp.wishlist') }}">Wishlist</a>
+                    <a href="{{ url_for('auth_bp.logout') }}">Logout</a>
+                </div>
+
+            </div>
+        </div>
+        {% else %}
+            <a href="{{ url_for('auth_bp.login') }}">
+                <button class="login-button">Login</button>
+            </a>
+    {% endif %}
+
+    </div>
+</div>

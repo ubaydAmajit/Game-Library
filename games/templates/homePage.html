@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block title %}Game Library{% endblock %}
+{% block content %}
+<div class="para">
+    <h2>Welcome!</h2>
+    <p>Welcome to the center of gaming related content. Our library makes finding information about your favourite games easier than ever.
+
+    </p>
+</div>
+    <div class="para2">
+        <h2>All In One Place</h2>
+        <p>Find out more about the games you love or find out if you fancy a new game to play.
+        With a plethora of different genres to explore from, there is a game for everyone to view and explore, all in one place.</p>
+    </div>
+    <div class="git">
+        <h2>Find Out More!</h2>
+        <p>Click the icon below if you want to get redirected to our GitHub and see
+        the full development of this Game Library!</p>
+        <a href="https://github.com/UoA-CS-Sindhwani-CS235-S2-2023/cs235-2023-gameswebapp-assignment-uabd315bsar286mwhi266" target="_blank">
+            <img src="{{ url_for('static', filename='github_icon.png')}}" alt="githubIcon" width="120" height="120" />
+        </a>
+    </div>
+{% endblock %}
