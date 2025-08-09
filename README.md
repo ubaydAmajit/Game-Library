@@ -164,7 +164,6 @@ The application supports various configuration options through environment varia
 - `ALCHEMY_URI`: Database connection string
 
 
-**Happy Gaming! 🎮**
 
 
 
